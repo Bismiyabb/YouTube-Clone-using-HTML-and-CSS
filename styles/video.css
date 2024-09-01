@@ -1,0 +1,146 @@
+.thumbnails {
+  width: 100%;
+
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+  width: 36px;
+  border-radius: 20px;
+
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+
+}
+
+.video-title-link {
+  color: black;
+  text-decoration: none;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+@media (min-width:1000px) {
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width:1000px) {
+
+  .video-author,
+  .video-stats {
+    font-size: 14px;
+  }
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+  /*border: 2px solid rgb(0, 255, 55);*/
+
+}
+
+@media (max-width:750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width:751px) and (max-width:999px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.video-time {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  /*font-weight of 400 is normal,700 is bold and 500 is semi bold*/
+  padding: 4px;
+  /*shorthand property for padding-top,bottom,left and right*/
+  border-radius: 2px;
+}
+
+.profile-picture-container {
+  display: inline-block;
+  position: relative;
+}
+
+.channel-tooltip {
+  position: absolute;
+  top: 55px;
+  background-color: white;
+  font-family: Roboto, Arial;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  border-radius: 6px;
+  padding: 12px 12px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 300;
+}
+
+.channel-picture:hover .channel-tooltip {
+  opacity: 1;
+}
+
+.channel-tooltip-picture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+
+
+.channel-tooltip-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.channel-tooltip-stats {
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
